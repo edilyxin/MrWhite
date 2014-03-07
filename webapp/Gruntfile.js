@@ -82,6 +82,6 @@ module.exports = function(grunt) {
   // Load Grunt tasks declared in the package.json file
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   // Default task(s).
-  grunt.registerTask('default', ['express', 'watch']);
+  grunt.registerTask('default', ['coffee', 'express', 'watch']);
   grunt.registerTask('build', ['stylus', 'cssmin', 'coffee', 'uglify']);
 };

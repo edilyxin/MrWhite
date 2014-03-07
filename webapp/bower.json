@@ -1,0 +1,22 @@
+{
+  "name": "mr_white_app",
+  "version": "0.0.1",
+  "homepage": "https://github.com/edilyxin/MrWhite",
+  "authors": [
+    "LiuYi(Roy) <topcatv@gmail.com>"
+  ],
+  "description": "mr_white_app",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1"
+  }
+}
