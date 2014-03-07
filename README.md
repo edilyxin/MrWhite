@@ -7,8 +7,11 @@
 1. [node.js](http://nodejs.org/)
 2. [mongodb](http://www.mongodb.org/)
 3. 安装express、gruntjs、bower
+
   > npm install -g express
+
   > npm install -g grunt-cli
+  
   > npm install -g bower
 
 ### 初始化环境
