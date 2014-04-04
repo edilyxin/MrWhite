@@ -1,4 +1,5 @@
 Webapp::Application.routes.draw do
+  mount WeixinRailsMiddleware::Engine, at: "/"
 	resources :users
   resources :sessions, only: [:new, :create, :destroy]
 	root to: 'index#index'
