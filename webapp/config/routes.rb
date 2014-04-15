@@ -5,6 +5,7 @@ Webapp::Application.routes.draw do
 		resources :products
 	end
 	resources :locates
+  resources :articles
 	resources :product_catalogs
   resources :sessions, only: [:new, :create, :destroy]
 	root to: 'index#index'

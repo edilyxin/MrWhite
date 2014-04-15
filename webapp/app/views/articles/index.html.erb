@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="btn-group">
+    <%= link_to "新建", new_article_path, class: 'btn btn-default' %>
+    <a class="btn btn-default" href="">删除</a>
+  </div>
+</div>
+<br>
+<div class="row">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>序号</th>
+      <th>标题</th>
+      <th>图片</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render partial:'articles/article_item', collection: @article_items %>
+    </tbody>
+  </table>
+</div>
