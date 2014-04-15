@@ -1,0 +1,13 @@
+<h1>创建新区域</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	<%= form_for @locate do |f| %>
+	<div class="form-group">
+		<%= f.label :name, '区域名' %>
+		<%= f.text_field :name, class: 'form-control', placeholder: '请输入区域名' %>
+	</div>
+	<%= f.submit "创建", class: 'btn btn-lg btn-primary' %>
+	<% end %>
+	</div>
+</div>

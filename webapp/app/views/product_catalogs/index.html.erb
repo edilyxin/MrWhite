@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="btn-group">
+		<%= link_to "新建", new_product_catalog_path, class: 'btn btn-default' %>
+		<a class="btn btn-default" href="">删除</a>
+	</div>
+</div>
+<br>
+<div class="row">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>菜系名</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%= render partial:'product_catalogs/product_catalog_item', collection: @product_catalog_items %>
+		</tbody>
+	</table>
+</div>

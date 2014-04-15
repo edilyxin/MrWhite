@@ -1,0 +1,41 @@
+<h1>编辑商铺</h1>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	<%= form_for @store do |f| %>
+	<div class="form-group">
+		<%= f.label :name, '店铺名' %>
+		<%= f.text_field :name, class: 'form-control', placeholder: '请输入店铺名' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :logo, '店铺LOGO' %>
+		<%= f.file_field :logo, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :description, '店名描述' %>
+		<%= f.text_area :description, class: 'form-control', placeholder: '请输入店铺描述' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :productCatalog_id, '菜系' %>
+		<%= f.collection_select :productCatalog_id, ProductCatalog.all, :id, :name, {prompt: '请选择'}, {class: 'form-control'} %>
+	</div>
+	<div class="form-group">
+		<%= f.label :locate_id, '店铺区域' %>
+		<%= f.collection_select :locate_id, Locate.all, :id, :name, {prompt: '请选择'}, {class: 'form-control'} %>
+	</div>
+	<div class="form-group">
+		<%= f.label :address, '店铺地址' %>
+		<%= f.text_area :address, class: 'form-control', placeholder: '请输入店铺地址' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :tel, '联系电话' %>
+		<%= f.text_field :tel, class: 'form-control', placeholder: '请输入联系电话' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :area, '配送区域' %>
+		<%= f.text_area :area, class: 'form-control', placeholder: '请输入配送区域' %>
+	</div>
+	<%= f.submit "更新", class: 'btn btn-lg btn-primary' %>
+	<% end %>
+	</div>
+</div>

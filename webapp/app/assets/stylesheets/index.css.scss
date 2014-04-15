@@ -32,3 +32,6 @@
 .error {
 	@extend .danger;
 }
+.alert-notice {
+	@extend .alert-success;
+}

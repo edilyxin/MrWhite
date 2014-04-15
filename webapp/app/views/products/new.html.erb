@@ -1,0 +1,29 @@
+<h1>创建新商品</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @product, url: store_products_path(@store, @product), html:{multipart:true} do |f| %>
+        <div class="form-group">
+          <label>店铺名</label>
+          <p class="form-control-static"><%= @store.name %></p>
+        </div>
+        <div class="form-group">
+          <%= f.label :name, '商品名' %>
+          <%= f.text_field :name, class: 'form-control', placeholder: '请输入商品名' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, '商品描述' %>
+          <%= f.text_area :description, class: 'form-control', placeholder: '请输入商品描述' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :price, '商品单价' %>
+          <%= f.text_field :price, class: 'form-control', placeholder: '请输入商品价格' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :images, '商品图片' %>
+          <%= f.file_field :images, class: 'form-control' %>
+        </div>
+        <%= f.submit "创建", class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  </div>
+</div>
