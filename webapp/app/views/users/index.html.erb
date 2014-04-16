@@ -1,0 +1,20 @@
+<div class="row">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>用户名</th>
+				<th>邮箱</th>
+				<th>微信id</th>
+				<th>电话</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%= render partial:'users/user_item', collection: @user_items %>
+		</tbody>
+	</table>
+	<% if @user_items.any? %>
+		<%= will_paginate @user_items %>
+	<% end %>
+</div>

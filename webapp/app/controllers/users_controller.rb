@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+	def index
+		@user_items = User.all.paginate(page: params[:page])
+	end
+
   def new
 		@user = User.new
   end
