@@ -14,6 +14,10 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/emmet-vim'
 Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key = 'f'
+
+Bundle 'bling/vim-airline'
+
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/snipmate-snippets'
@@ -47,3 +51,4 @@ set showmatch
 set incsearch
 set hlsearch
 autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
+set laststatus=2
