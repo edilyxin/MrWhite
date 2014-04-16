@@ -51,7 +51,9 @@ WeixinRailsMiddleware::WeixinController.class_eval do
       case event_type
       when "subscribe"   # 关注公众账号
 				openid = @weixin_message.FromUserName
-				User.create({name: openid,email: openid+'@bgj.com',openid: openid, password: 'bgj_'+openid})
+				puts User.last.email
+				user = User.new({name: openid, email: openid+'@bgj.com', openid: openid, password: 'bgj_'+openid, password_confirmation: 'bgj_'+openid})
+				user.save
         if @keyword.present?
           # 扫描带参数二维码事件: 1. 用户未关注时，进行关注后的事件推送
           return reply_text_message("扫描带参数二维码事件: 1. 用户未关注时，进行关注后的事件推送, keyword: #{@keyword}")
