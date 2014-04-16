@@ -5,7 +5,7 @@ class IndexController < ApplicationController
   end
 
   def manage
-    if current_user.email != 'topcatv@gmail.com'
+    if current_user.email != 'admin@bgj.com'
       redirect_to root_path
     end
   end

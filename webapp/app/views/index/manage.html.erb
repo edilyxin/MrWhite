@@ -1,5 +1,14 @@
 <div class="btn-group btn-group-justified">
-	<%= link_to '店铺管理', stores_path, class: 'btn btn-default' %>
-	<%= link_to '地域管理', locates_path, class: 'btn btn-default' %>
-	<%= link_to '菜系管理', product_catalogs_path, class: 'btn btn-default' %>
+	<%= link_to stores_path, class: 'btn btn-default' do %>
+		<span class="glyphicon glyphicon-home"></span> 店铺管理
+	<% end %>
+	<%= link_to locates_path, class: 'btn btn-default' do %>
+		<span class="glyphicon glyphicon-map-marker"></span> 地域管理 
+	<% end %>
+	<%= link_to product_catalogs_path, class: 'btn btn-default' do %>
+		<span class="glyphicon glyphicon-tags"></span> 菜系管理
+	<% end %>
+	<%= link_to articles_path, class: 'btn btn-default' do %>
+		<span class="glyphicon glyphicon-book"></span> 文章管理
+	<% end %>
 </div>

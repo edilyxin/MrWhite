@@ -1,7 +1,7 @@
 <tr>
   <td><%= article_item_counter+1 %></td>
   <td><%= article_item.title %></td>
-  <td><%= image_tag article_item.image %></td>
+  <td><%= image_tag article_item.image, size: "64" %></td>
   <td>
     <%= link_to '编辑', edit_article_path(article_item) %>
     <%= link_to '删除', article_path(article_item), method: :delete, data: { confirm: "确定删除吗？" } %>
