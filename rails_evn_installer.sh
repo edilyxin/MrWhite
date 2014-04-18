@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get install git curl libyaml-dev libxslt-dev libxml2-dev libsqlite3-dev
+echo 'y' | sudo apt-get install git curl libyaml-dev libxslt-dev libxml2-dev libsqlite3-dev
 curl -sSL https://get.rvm.io | bash -s stable
 sed -i 's!cache.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' ~/.rvm/config/db
 echo -e 'install: --no-rdoc --no-ri\nupdate: --no-rdoc --no-ri' > ~/.gemrc
