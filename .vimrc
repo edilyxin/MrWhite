@@ -17,7 +17,7 @@ Bundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = 'f'
 
 Bundle 'bling/vim-airline'
-
+Bundle 'scrooloose/nerdtree'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/snipmate-snippets'
