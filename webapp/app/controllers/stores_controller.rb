@@ -2,7 +2,7 @@ class StoresController < ApplicationController
 	before_action :signed_in_user
 
 	def index
-		@store_items = Store.paginate(page: params[:page])
+		@store_items = current_user.stores.paginate(page: params[:page])
 	end
 
 	def new
@@ -12,6 +12,7 @@ class StoresController < ApplicationController
 	def create
 		@store = Store.new(store_params)
 		@store.save
+		current_user.stores << @store
 
 		redirect_to new_store_path
 	end
@@ -40,6 +41,6 @@ class StoresController < ApplicationController
 	private
 		
 	def store_params
-		params.require(:store).permit(:name, :description, :address, :tel, :area, :logo, :productCatalog_id, :locate_id, :user_id)
+		params.require(:store).permit(:name, :description, :address, :tel, :area, :logo, :productCatalog_id, :locate_id)
 	end
 end

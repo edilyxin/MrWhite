@@ -1,7 +1,6 @@
 <tr>
 	<td><%= store_item_counter+1 %></td>
 	<td><%= store_item.name %></td>
-	<td><%= store_item.user.name %></td>
 	<td><%= image_tag store_item.logo, size: '64' %></td>
 	<td>
 		<%= link_to '编辑', edit_store_path(store_item) %>
