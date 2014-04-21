@@ -20,6 +20,7 @@ Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/snipmate-snippets'
 " vim-scripts repos
 Bundle 'L9'
