@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416053929) do
+ActiveRecord::Schema.define(version: 20140421023454) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20140416053929) do
     t.string   "image"
     t.string   "url"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "sotre_id"
+    t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,18 +49,8 @@ ActiveRecord::Schema.define(version: 20140416053929) do
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id"
   add_index "order_items", ["product_id"], name: "index_order_items_on_product_id"
 
-  create_table "orders", force: true do |t|
-    t.string   "contacter"
-    t.string   "tel"
-    t.string   "address"
-    t.string   "other"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "status"
-  end
-
-  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+# Could not dump table "orders" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "product_catalogs", force: true do |t|
     t.string   "name"
@@ -71,6 +70,15 @@ ActiveRecord::Schema.define(version: 20140416053929) do
   end
 
   add_index "products", ["store_id"], name: "index_products_on_store_id"
+
+  create_table "scores", force: true do |t|
+    t.string   "source"
+    t.integer  "score"
+    t.integer  "type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stores", force: true do |t|
     t.string   "name"

@@ -38,6 +38,17 @@ class StoresController < ApplicationController
 		redirect_to stores_path, notice: '删除成功'
 	end
 
+	def status
+		@store = Store.find(params[:id])
+		if @store.status == 1
+			@store.status = 0
+		else
+			@store.status = 1
+		end
+		@store.save
+		redirect_to stores_path, notice: '营业状态已更改'
+	end
+
 	private
 		
 	def store_params
