@@ -2,6 +2,7 @@ Webapp::Application.routes.draw do
   mount WeixinRailsMiddleware::Engine, at: "/"
 	resources :users
 	resources :stores do
+		patch 'status', :on => :member
 		resources :products
 	end
 	resources :locates
@@ -13,7 +14,6 @@ Webapp::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/manage', to: 'index#manage', via: 'get'
-  match '/store_status/:id', to: 'stores#status', via: 'patch', as: 'store_status'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

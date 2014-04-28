@@ -5,9 +5,9 @@
 	<td><%= store_status store_item %></td>
 	<td>
 		<% if store_item.status == 1%>
-		<%= link_to '停业', store_status_path(store_item), method: :patch %>
+		<%= link_to '停业', status_store_path(store_item), method: :patch %>
 		<% else %>
-		<%= link_to '营业', store_status_path(store_item), method: :patch %>
+		<%= link_to '营业', status_store_path(store_item), method: :patch %>
 		<% end %>
 		<%= link_to '编辑', edit_store_path(store_item) %>
 		<%= link_to '去添加商品', store_products_path(store_item) %>
