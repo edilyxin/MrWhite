@@ -49,9 +49,6 @@ ActiveRecord::Schema.define(version: 20140421023454) do
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id"
   add_index "order_items", ["product_id"], name: "index_order_items_on_product_id"
 
-# Could not dump table "orders" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
   create_table "product_catalogs", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -74,7 +71,7 @@ ActiveRecord::Schema.define(version: 20140421023454) do
   create_table "scores", force: true do |t|
     t.string   "source"
     t.integer  "score"
-    t.integer  "type"
+    t.integer  "stype"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

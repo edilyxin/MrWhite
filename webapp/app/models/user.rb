@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	has_secure_password
 	
 	has_many :stores
+	has_many :scores
 
 	def User.new_remember_token
 		SecureRandom.urlsafe_base64
@@ -19,9 +20,16 @@ class User < ActiveRecord::Base
 		Digest::SHA1.hexdigest(token.to_s)
 	end
 
+	def my_score
+		total_score = 0
+		self.scores.to_a.each { |s| total_score += s.score }
+		total_score
+	end
+
 	private
 
 	def create_remember_token
 		self.remember_token = User.hash(User.new_remember_token)
 	end
+
 end

@@ -35,7 +35,10 @@
 		<%= f.label :area, '配送区域' %>
 		<%= f.text_area :area, class: 'form-control', placeholder: '请输入配送区域' %>
 	</div>
-	<%= f.submit "创建", class: 'btn btn-lg btn-primary' %>
+	<%= f.submit "保存", class: 'btn btn-primary' %>
+	<%= link_to stores_path, class: 'btn btn-default' do %>
+		<span class="glyphicon glyphicon-circle-arrow-left"></span> 返回列表 
+	<% end  %>
 	<% end %>
 	</div>
 </div>

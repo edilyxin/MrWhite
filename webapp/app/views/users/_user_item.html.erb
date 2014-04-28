@@ -4,6 +4,7 @@
 	<td><%= user_item.email %></td>
 	<td><%= user_item.openid %></td>
 	<td><%= user_item.tel %></td>
+	<td><%= user_item.my_score%></td>
 	<td>
 		<%= link_to '编辑', edit_user_path(user_item) %>
 		<%= link_to '删除', user_path(user_item), method: :delete, data: { confirm: "确定删除吗？" } %>
