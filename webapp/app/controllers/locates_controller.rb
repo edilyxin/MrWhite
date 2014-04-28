@@ -11,7 +11,7 @@ class LocatesController < ApplicationController
 		@locate = Locate.new(locate_params)
 		@locate.save
 
-		redirect_to new_locate_path
+		redirect_to new_locate_path, notice: "保存成功！"
 	end
 
 	def update

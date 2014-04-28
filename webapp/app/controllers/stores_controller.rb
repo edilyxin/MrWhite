@@ -14,7 +14,7 @@ class StoresController < ApplicationController
 		@store.save
 		current_user.stores << @store
 
-		redirect_to new_store_path
+		redirect_to new_store_path, notice: "保存成功！"
 	end
 	
 	def update

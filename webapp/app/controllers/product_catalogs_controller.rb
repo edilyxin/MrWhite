@@ -11,7 +11,7 @@ class ProductCatalogsController < ApplicationController
 		@product_catalog = ProductCatalog.new(product_catalog_params)
 		@product_catalog.save
 
-		redirect_to new_product_catalog_path
+		redirect_to new_product_catalog_path, notice: "保存成功！"
 	end
 	
 	def update

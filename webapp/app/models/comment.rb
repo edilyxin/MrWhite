@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-	belong_to :user
-	belong_to :store
-	belong_to :order
+	belongs_to :user
+	belongs_to :store
+	belongs_to :order
 end

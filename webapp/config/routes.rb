@@ -6,6 +6,7 @@ Webapp::Application.routes.draw do
 		resources :products
 	end
 	resources :locates
+	resources :comments
   resources :articles
 	resources :product_catalogs
   resources :sessions, only: [:new, :create, :destroy]

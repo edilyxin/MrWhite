@@ -1,0 +1,18 @@
+<div class="row">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>序号</th>
+				<th>店铺</th>
+				<th>用户</th>
+				<th>内容</th>
+				<th>评论时间</th>
+				<th>修改时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%= render partial:'comments/comment_item', collection: @comment_items %>
+		</tbody>
+	</table>
+</div>
