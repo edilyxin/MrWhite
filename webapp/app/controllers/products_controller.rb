@@ -1,9 +1,13 @@
 class ProductsController < ApplicationController
-	before_action :signed_in_user
+	before_action :signed_in_user, except: [:wx_index]
 
 	def index
 		@store = Store.find(params[:store_id])
 		@product_items = @store.products.paginate(page: params[:page])
+	end
+
+	def wx_index
+		@product_items = Store.find(params[:store_id]).products.all
 	end
 
 	def new

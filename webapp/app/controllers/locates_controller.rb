@@ -3,6 +3,10 @@ class LocatesController < ApplicationController
 		@locate_items = Locate.all
 	end
 
+	def wx_index
+		@locate_items = Locate.all
+	end
+
 	def new
 		@locate = Locate.new
 	end

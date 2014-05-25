@@ -1,8 +1,12 @@
 class StoresController < ApplicationController
-	before_action :signed_in_user
+	before_action :signed_in_user, except: [:wx_index]
 
 	def index
 		@store_items = current_user.stores.paginate(page: params[:page])
+	end
+
+	def wx_index
+		@store_items = Store.where(locate_id: params[:id]) 
 	end
 
 	def new

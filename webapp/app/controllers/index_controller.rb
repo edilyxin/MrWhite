@@ -4,6 +4,10 @@ class IndexController < ApplicationController
   def index
   end
 
+	def wx
+		render 'wxpages/index'
+	end
+
   def manage
     if current_user.email != 'admin@bgj.com'
       redirect_to root_path
