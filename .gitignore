@@ -24,4 +24,4 @@ doc/
 .idea
 bundler_stubs/
 tags
-../.idea/
+webapp/public/uploads/
