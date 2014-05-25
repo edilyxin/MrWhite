@@ -1,0 +1,26 @@
+<tr>
+	<td><%= wxstore_item_counter+1 %></td>
+	<td><%= wxstore_item.name %></td>
+	<td><%= image_tag wxstore_item.logo, size: '64' %></td>
+	<td><%= store_status wxstore_item %></td>
+	<td>
+		<% if wxstore_item.status == 1%>
+		<%= link_to '停业', status_store_path(wxstore_item), method: :patch %>
+		<% else %>
+		<%= link_to '营业', status_store_path(wxstore_item), method: :patch %>
+		<% end %>
+	</td>
+</tr>
+<li>
+<div class="col-xs-2"><a href="#" class="thumbnail"><%= image_tag wxstore_item.logo, size: '64' %></a></div>
+<!-- 每个店铺的必要信息，如：菜系，好评，地点，电话，状态 -->
+<div class="col-xs-3">
+  <ul>
+    <li><label class="label-default" >店名：</label><%= wxstore_item.name %></li>
+    <li><label class="label-default" >状态：</label><%= wxstore_item.status%></li>
+    <li><label class="label-default" >电话：</label><%= wxstore_item.tel %></li>
+  </ul>
+</div>
+<!-- 每个店铺的必要信息，如：菜系，好评，地点，电话，状态 -->
+<div class="col-xs-1"><%=link_to "下订单",wx_store_products_path(wxstore_item.id) %></div>
+</li>

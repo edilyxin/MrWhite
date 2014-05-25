@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-sx-1">7</div>
+  <div class="col-sx-1">7</div>
+  <div class="col-sx-1">7</div>
+  <div class="col-sx-1">7</div>
+  <div class="col-sx-1">7</div>
+</div>
+<form action="#">
+<div class="row">
+  <ul>
+    <%= render partial:'products/wxproduct_item', collection: @product_items %>
+  </ul>
+</div>
+
+</form>
+<%=link_to "去下单","#" %>

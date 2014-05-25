@@ -1,2 +1,5 @@
 module LocatesHelper
+
+
+
 end

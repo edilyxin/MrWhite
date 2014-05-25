@@ -15,6 +15,10 @@ Webapp::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/manage', to: 'index#manage', via: 'get'
+  match '/wx', to: 'index#wx', via: 'get'
+  match '/wx/locates', to: 'locates#wx_index', via: 'get'
+  match '/wx/stores/:id', to: 'stores#wx_index', via: 'get', as: 'wx_stores'
+  match '/wx/stores/:store_id/products', to: 'products#wx_index', via: 'get', as: 'wx_store_products'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
